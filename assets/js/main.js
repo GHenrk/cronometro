@@ -3,10 +3,11 @@ const elementoSpan = document.getElementById('cronometro')
 const btnStop = document.getElementById('btnStop');
 const btnStart = document.getElementById('btnStart');
 const btnReset = document.getElementById('btnReset');
+const elementoMilisegundos = document.getElementById('milisegundos');
 
 //Variáveis Manipuladas;
-let segundo = 50;
-let minuto = 58;
+let segundo = 0;
+let minuto = 0;
 let hora = 0;
 
 
@@ -28,7 +29,13 @@ const incrementaMinuto = () => {
     if (minuto>59){
         minuto = 0;
         hora++;
+        elementoMinuto= `0${minuto}}`
         elementoHora= `0${hora}`;
+    }
+    if (minuto >= 10){
+        elementoMinuto = `${minuto}`;
+    } else {
+        elementoMinuto = `0${minuto}` 
     }
 }
 
@@ -57,7 +64,6 @@ const calculaSegundo = () => {
         incrementaMinuto();
         mostraCronometro (elementoHora, elementoMinuto, elementoSegundo);
     }
-
 }
 
 
@@ -86,3 +92,5 @@ const calculaSegundo = () => {
     btnReset.onclick = () => {
         resetaCronometro();
     }
+
+    resetaCronometro();

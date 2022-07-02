@@ -1,0 +1,67 @@
+
+
+body {
+    background-color: rgb(2,0,36);
+    font-family: 'Anton', sans-serif;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width:70vw;
+    padding:2em 0;
+    margin: 10vw  auto 0 auto;
+    color: #FFF;
+    background-color: #101f78;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cronometro {
+    font-size:8em;
+    text-align: center;
+}
+
+.control_panel { 
+    width:70vw;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding: 1em;
+    background-color: #020f59;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.botao {
+    width:20%;
+    padding:0.5em;
+    background-color: #353E70;
+    border:1px solid #2947F0;
+    font-family: 'Anton', sans-serif;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #1C30A3;
+    transition: 0.5s;
+
+}
+
+.botao:hover {
+    background-color: aqua;
+}
+
+@media screen and (max-width:480px) {
+    .display {
+        width:90vw;
+    }
+    .control_panel {
+        width:90vw;
+    }
+    .cronometro {
+        font-size:4em;
+    }
+}
